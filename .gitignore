@@ -67,3 +67,7 @@ coverage*.info
 
 # Others
 node_modules/
+
+*appsettings.json
+appsettings.json
+appsettings.*.json
