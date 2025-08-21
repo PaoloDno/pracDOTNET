@@ -1,9 +1,9 @@
 using api.Data;
+using api.Models;
+
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-var app = builder.Build();
 
 // DB context
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
@@ -11,7 +11,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-
+var app = builder.Build();
 
 app.UseHttpsRedirection();
 
